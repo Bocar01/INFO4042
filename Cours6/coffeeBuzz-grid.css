@@ -1,0 +1,304 @@
+html {
+    /* arrière plan */
+    background: url("../img/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* liens hypertexte - génériques */
+a:link {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+/* ================= HEADER=============== */
+header {
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2%;
+    background: url("../img/header-bg.jpg") center;
+    background-size: cover;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 5em;
+    text-shadow: -5px -5px 4px black;
+}
+
+/* =================NAV=================== */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    /* mettre les objets cote a cote, ici a gauche gauche */
+    width: 25%;
+    background: rgba(20, 2, 0, 8);
+
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    padding: .5rem 0;
+    text-decoration: none;
+}
+/* Menu a 2 niveau */
+nav ul ul
+{
+  display: none; /* vavhe le menu jusqu'a ce quew le curseur doit dessus*/
+  position: absolute;
+  background: rgba(102,58,29, 0.9);
+}
+
+nav ul ul li
+{
+ border: none;
+ float: none; /* positionner a la verticale */
+width: 100%; /* 100% du parent qui a 25 % */
+}
+/* Faire apparaitre le menu a 2 niveau */
+nav ul li:hover ul
+{
+    display: block;
+    width: 100%;
+
+}
+/* Fin du menu a 2 niveau */
+
+/* **********************MAIN************************** */
+main
+{
+    background: rgba(255, 255, 255, 0.8);
+    margin: 2rem;
+}
+section, aside
+{
+    padding: 1rem;
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.8);
+
+}
+section hr
+{
+    max-width: 300px;
+    border: 1px solid #c8c8c8;
+}
+section h2
+{
+ text-align: center;
+}
+#splash img
+{
+    max-width: 100%;/* responsive */
+    height: auto;
+    /* padding: .25em;
+    border: 1px dashed; */
+}
+
+#special h2:before, #special h2:after
+{
+background: url("../img/sale.png");
+padding: 0 1rem;
+content:"" ;
+}
+/* ****************************ASIDE*********************** */
+aside a:link, aside a:visited
+{
+ color: #270803;
+}
+
+aside :hover
+{
+font-weight: bold;
+
+}
+
+.rond-100
+{
+    border-radius: 100px;
+}
+/* *************************TABLE********************************* */
+#carrieres table
+{
+ border-spacing: 0;
+ border-collapse: collapse;
+ width: 100% ;
+ max-width: 100%;
+ margin-bottom: 1.25rem;
+ border: 1px solid #664026;
+}
+
+#carrieres table a
+{
+    color: #300;
+}
+
+#carrieres table thead
+{
+    background: rgb(77, 45, 34);
+    color: #fff;
+}
+
+
+#carrieres table thead tr th
+{
+   padding: .25rem;
+}
+
+#carrieres table tbody tr td
+{
+    padding: .25rem;
+    line-height: 1.42;
+    vertical-align: top;
+    border: 1px solid #654026;
+
+}
+
+
+#carrieres table thead tr td:nth-child(4)
+#carrieres table thead tr td:nth-child(5)
+{
+   
+    color: #d9534f
+}
+
+#carrieres table thead tr:nth-child(oven)
+{
+    background-color: rgb(122, 119,199);
+}
+#carrieres table thead tr:nth-child(odd)
+{
+    background-color: rgb(235, 234,234);
+}
+
+***************************************** FORMS **************************************/
+form{
+    padding: 1rem;
+}
+label{
+    float:left;
+    width:100%;
+    font-weight:bold;
+    margin-right:1em;
+    color: #825539;
+}
+
+input[type=text], input[type=email], select{
+    display: block;
+    width: 100%;
+    height: 2rem;
+    padding: 0.375rem 0.75rem;/*https://www.w3schools.com/tags/ref_pxtoemconversion.asp*/
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=radio]{
+    margin:0
+}
+
+input[type=date], #heardAbout{
+    display: block;
+    /*width: auto;*/
+    width:15em;
+    height: 2rem;
+    padding: 0.375rem 0.75rem;/*https://www.w3schools.com/tags/ref_pxtoemconversion.asp*/
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#heardAbout{
+    height: auto;
+    line-height: 1.2em;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+fieldset {
+    margin: 0;
+    padding: .35em 0 .75em;
+    border: 0;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: .3em 0;
+    margin-bottom: .3em;
+    color: #4d2d22;
+    border-bottom: 2px solid #c8c8c8;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.checkbox-label label{
+    font-weight: normal;
+    color:inherit;
+}
+
+.checkbox-label label:last-child{
+    margin-bottom:1em;
+}
+/* *************************FOOTER********************************* */
+footer
+{
+    font-size: 75%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+footer p
+{
+    color: #fff;
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+@media only screen and (max-width:479)
+{
+    #carrieres table thead tr th:nth-child(2)
+    {
+        display: none;
+    }
+    #carrieres table thead tr td:nth-child(3)
+    {
+        display: none;
+    }
+
+}
